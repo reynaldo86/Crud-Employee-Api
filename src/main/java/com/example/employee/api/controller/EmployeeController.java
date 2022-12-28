@@ -69,9 +69,10 @@ public class EmployeeController {
         }
         var employee = employeeOptional.get();
         employee.setName(employeeDto.getName());
+        employee.setCpf((employeeDto.getCpf()));
         employee.setAge(employee.getAge());
         employee.setSexo(employee.getSexo());
-        employee.setOffice(employee.getOffice());
+        employee.setEmail(employeeDto.getEmail());
         return ResponseEntity.status(HttpStatus.OK).body(employeeRepository.save(employee));
     }
 

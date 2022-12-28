@@ -9,9 +9,11 @@ public class EmployeeDto {
     @NotBlank
     private String name;
     @NotBlank
+    private String cpf;
+    @NotBlank
     private String age;
     @NotBlank
     private String sexo;
     @NotBlank
-    private String office;
+    private String email;
 }

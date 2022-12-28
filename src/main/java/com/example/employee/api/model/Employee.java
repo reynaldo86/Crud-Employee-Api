@@ -1,9 +1,11 @@
 package com.example.employee.api.model;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Email;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
 
 import java.io.Serial;
 import java.io.Serializable;
@@ -23,12 +25,16 @@ public class Employee implements Serializable {
     private UUID id;
     @Column(nullable = false, length = 50)
     private String name;
+
+    @Column(nullable = false)
+    private String cpf;
     @Column(nullable = false, length = 50)
     private String age;
     @Column(nullable = false, length = 50)
     private String sexo;
+    @Email
     @Column(nullable = false, length = 100)
-    private String office;
+    private String email;
     @Column(nullable = false, length = 50)
     private LocalDateTime registrationDate;
 
